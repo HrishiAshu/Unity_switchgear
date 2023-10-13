@@ -16,6 +16,7 @@ import {
 
 
 export default function SideBar() {
+  console.log("Hi")
  
   const navigate = useNavigate()
 
