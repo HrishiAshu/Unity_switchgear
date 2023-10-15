@@ -1,0 +1,101 @@
+.addProductPage {
+    height: 90vh;
+    padding: 0px 20px;
+    margin-top: 3vh;
+    /* width: 60vw; */
+    overflow-y: scroll;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+}
+
+.buttonAddProduct>button {
+    margin-top: 20px;
+    width: 55.5%;
+    background-color: #FF6A00;
+    color: white;
+    border: none;
+}
+
+
+
+.buttonAddProduct>button :hover {
+    background-color: #919495;
+    color: black;
+
+
+}
+
+.width-21vh {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25vh;
+}
+
+
+
+
+.AddproductTitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 33px;
+    left: 3%;
+    font-size: x-large;
+
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.form-container {
+    margin: 0 auto;
+    justify-self: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+
+
+}
+
+@media screen and (max-width: 600px) {
+
+    .width-21vh {
+        width: 15vh;
+    }
+
+
+    .buttonAddProduct>button {
+        margin-top: 20px;
+        width: 55vw;
+        background-color: #FF6A00;
+        color: white;
+        border: none;
+    }
+
+
+    .AddproductTitle {
+        font-size: 1rem;
+        position: absolute;
+        top: 0px;
+        left: 18px;
+
+
+    }
+
+    .form-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
