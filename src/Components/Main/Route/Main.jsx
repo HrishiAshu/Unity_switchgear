@@ -3,6 +3,7 @@ import "./Main.css"
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from '../Home/Home';
 import Admin from '../Admin/Admin';
+import WhyUnity from '../WhyUnity/WhyUnity';
 
 
 const Main = () => {
@@ -20,6 +21,9 @@ const Main = () => {
         <Route extract path='Home/Orders' element={<Orders/>} />
         <Route extract path='Home/Cart' element={<Cart/>} />
         <Route extract path='Home/ProductOverview' element={<ProductOverView/>} /> */}
+                    <Route extract path='/WhyUnity/' element={<WhyUnity/>} />
+
+
 
 
                 </Routes>

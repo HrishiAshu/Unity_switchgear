@@ -18,45 +18,22 @@
   margin-top: 5%;
  }
   
- .OurServicesHomePage{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  margin-top: 5%;
-  gap: 10px;
- }
-
- .service-card   {
-  margin: 5%;
-  width: 80%;
-   transition: background-color 0.3s ease, transform 0.3s ease;
+ .carousel-fade .carousel-item {
+  opacity: 0;
+  transition-duration: 1s;
 }
 
- 
- 
+.carousel-fade .carousel-item.active {
+  opacity: 1;
+}
 
+.carousel-fade .carousel-item-next.carousel-item-left,
+.carousel-fade .carousel-item-prev.carousel-item-right {
+  opacity: 1;
+}
 
-
-
- .service-card  {
-  border: none;
-  background: #404040;
-  color: #000000 !important;
-  font-weight: 100;
-  padding: 20px;
-  text-transform: uppercase;
-  border-radius: 6px;
-  display: inline-block;
-  transition: all 0.3s ease 0s;
-  transition: ease-out;
-  }
-  .service-card :hover {
-  color: #404040 !important;
-  font-weight: 700 !important;
-  letter-spacing: 3px;
-  background: none;
-  -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
-  -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
-  transition: all 0.3s ease 0s;
-  }
+.carousel-fade .carousel-item-next,
+.carousel-fade .carousel-item-prev,
+.carousel-fade .carousel-item.active {
+  transform: translateX(0);
+}
