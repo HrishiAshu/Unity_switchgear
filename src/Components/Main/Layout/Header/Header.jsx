@@ -12,10 +12,9 @@ const Header = () => {
 
     const navigate = useNavigate();
 
-const handleWhyUnity=()=>{
-    navigate("./WhyUnity")
-
-}
+    const handleWhyUnity = () => {
+        navigate("/Home/WhyUnity")
+    }
 
 
     return (
@@ -29,23 +28,23 @@ const handleWhyUnity=()=>{
                             <Nav className="me-auto">
                                 <Nav.Link href="/">Home</Nav.Link>
                                 <NavDropdown title="About Us" id="basic-nav-dropdown">
-                                    <NavDropdown.Item onClick={handleWhyUnity} href="/WhyUnity/">Why Unity</NavDropdown.Item>
-                                    <NavDropdown.Item href="#action/3.2">Our History</NavDropdown.Item>
+                                    <NavDropdown.Item  href="/WhyUnity" >Why Unity</NavDropdown.Item>
+                                    <NavDropdown.Item href="/OurHistory">Our History</NavDropdown.Item>
                                     <NavDropdown.Item href="#action/3.3">Our Customers</NavDropdown.Item>
                                     {/* <NavDropdown.Item href="#action/3.3">Our Customers</NavDropdown.Item>
                                     <NavDropdown.Item href="#action/3.3">Our Customers</NavDropdown.Item> */}
 
 
                                 </NavDropdown>
+                                <Nav.Link href="/Solutions">Solutions</Nav.Link>
                                 <Nav.Link href="#link">Products</Nav.Link>
-                                <Nav.Link href="#link">Solutions</Nav.Link>
                                 <Nav.Link href="#link">Projects</Nav.Link>
 
 
                                 <Nav.Link href="#link">Contact Us</Nav.Link>
                             </Nav>
                             <NavDropdown title="Profile" id="basic-nav-dropdown">
-                                <NavDropdown.Item href="/Admin/*">Admin</NavDropdown.Item>
+                                <NavDropdown.Item href="Home/Admin/*">Admin</NavDropdown.Item>
                                 <NavDropdown.Divider />
                                 <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
                                 <NavDropdown.Divider />

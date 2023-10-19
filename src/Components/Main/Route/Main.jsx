@@ -3,34 +3,26 @@ import "./Main.css"
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from '../Home/Home';
 import Admin from '../Admin/Admin';
-import WhyUnity from '../WhyUnity/WhyUnity';
-
+import WhyUnity from '../../Main/WhyUnity/WhyUnity';
+import OurHistory from '../../Main/OurHistory/OurHistory';
+import Solutions from '../../Main/Solutions/Solutions';
 
 const Main = () => {
     return (
         <div>
-
             <BrowserRouter>
                 <Routes>
-                    <Route extract path='/*' element={<Home />} />
-                    <Route extract path='/Admin/*' element={<Admin/>} />
-                    {/*  <Route extract path='/login' element={<Login />} />
-        <Route extract path='/register' element={<Registeration />} />
-
-        <Route extract path='Home/Profile' element={<Profile/>} />
-        <Route extract path='Home/Orders' element={<Orders/>} />
-        <Route extract path='Home/Cart' element={<Cart/>} />
-        <Route extract path='Home/ProductOverview' element={<ProductOverView/>} /> */}
-                    <Route extract path='/WhyUnity/' element={<WhyUnity/>} />
-
-
+                    <Route path='/' element={<Home />} />
+                    <Route path='/Admin/*' element={<Admin />} />
+                    <Route path='/WhyUnity' element={<WhyUnity />} />
+                    <Route path='/OurHistory' element={<OurHistory />} />
+                    <Route path='/Solutions' element={<Solutions />} />
 
 
                 </Routes>
             </BrowserRouter>
         </div>
-
     )
 }
 
-export default Main
+export default Main;
