@@ -1,0 +1,25 @@
+.product-card {
+    margin: 5%;
+    width: 80%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    border: none;
+    background: #ffffff;
+    color: #000000 !important;
+    font-weight: 100;
+    padding: 20px;
+    text-transform: uppercase;
+    border-radius: 6px;
+    display: inline-block;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+    transform: scale(1);
+  }
+  
+  .product-card:hover {
+    transform: scale(1.05); /* Scale up the card on hover */
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; /* Add a subtle shadow on hover */
+    background-color: #ff3333c7; /* Change the background color on hover */
+    color: #fff; /* Change the text color on hover */
+  } 
+  

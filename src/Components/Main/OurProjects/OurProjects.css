@@ -1,0 +1,16 @@
+.Project-card {
+    width: 70%;
+    margin: 10px; /* Add some gap between the images */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    overflow: hidden;
+  }
+  
+  .Project-card:hover {
+    transform: scale(1.05); /* Scale up the image on hover */
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2); /* Add a subtle shadow on hover */
+    opacity: 0.8; /* Reduce opacity for a fade effect on hover */
+  }
+  
