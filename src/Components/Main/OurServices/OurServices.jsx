@@ -22,6 +22,7 @@ const OurServices = () => {
     <div className="OurServicesHomePage">
  
     <Container>
+      
         <h2 style={{textAlign:"center"}}>Our Services</h2>
     <Row>
       {services.map((service) => (

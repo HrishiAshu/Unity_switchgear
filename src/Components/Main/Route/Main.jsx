@@ -6,6 +6,9 @@ import Admin from '../Admin/Admin';
 import WhyUnity from '../../Main/WhyUnity/WhyUnity';
 import OurHistory from '../../Main/OurHistory/OurHistory';
 import Solutions from '../../Main/Solutions/Solutions';
+import Products from '../Products/Products';
+import Press from '../Press&Media/Press';
+import ContactUsForm from '../ContactUs/ContactUsForm';
 
 const Main = () => {
     return (
@@ -17,6 +20,15 @@ const Main = () => {
                     <Route path='/WhyUnity' element={<WhyUnity />} />
                     <Route path='/OurHistory' element={<OurHistory />} />
                     <Route path='/Solutions' element={<Solutions />} />
+                     {/* <Route path='/Products' element={<Projects />} /> */}
+                    <Route path='/Press' element={<Press />} />
+                    <Route path='/Products' element={<Products />} />
+
+
+                    <Route path='/ContactUs' element={<ContactUsForm />} />
+
+
+
 
 
                 </Routes>

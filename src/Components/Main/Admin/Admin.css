@@ -1,63 +1,87 @@
 .adminContainer {
 
-    width: 100vw;
-    height: 100vh;
-    padding: 0%;
-    margin: 0%;
-    overflow-x: hidden;
-    overflow-y: hidden;
- }
- 
- 
- .adminHeader {
-    justify-content: center;
-    height: 10vh;
-    position: relative;
-    background-color: white;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-    margin-bottom: 0px !important;
-    display: flex;
-    align-items: center;
-    z-index: 9999;
- }
- 
- .adminHeader>h2 {
-    font-size: 34px;
-    font-weight: bold;
-    color: rgba(0, 0, 0, 0.5);
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 10px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-    cursor: pointer;
-    font-family: 'Raleway', sans-serif;
-    -webkit-text-fill-color: transparent;
-    background: linear-gradient(90deg, #34ffe4, #494747);
-    -webkit-background-clip: text;
- }
- 
- .ag-theme-alpine {
-    overflow-x: hidden;
-    width: 100vw;
-    height: 100%;
-    border: 1px solid black;
- }
- 
- .adminMain {
-    width: 100vw;
-    height: 90vh;
-    display: flex;
-    justify-content: left;
- }
- 
- .adminSections{
-  margin: 0 auto;
+   width: 100vw;
+   height: 100vh;
+   padding: 0%;
+   margin: 0%;
+   overflow-x: hidden;
+   overflow-y: hidden;
+}
+
+/* AdminPanelHeader.css */
+.admin-header {
+   background-color: #ffc107;
+
+   padding: 20px;
+   text-align: center;
+}
+
+.admin-title {
+   font-size: 36px;
+   color: black;
+   /* Title text color */
+   margin: 0;
+   position: relative;
+   display: inline-block;
+   transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.admin-title::before {
+   content: '';
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   width: 100%;
+   height: 3px;
+   background-color: #fff;
+   /* Underline color */
+   transform: scaleX(0);
+   /* Initial scaleX of 0 to hide the underline */
+   transform-origin: left;
+   transition: transform 0.3s ease;
+   /* Animation duration */
+}
+
+.admin-title:hover {
+   color: #ffcc00;
+   /* Title text color on hover */
+   transform: scale(1.05);
+   /* Scale up the title on hover */
+   transition: transform 0.3s ease;
+   /* Add a transition for the scale effect */
+}
+
+.admin-title:hover::before {
+   transform: scaleX(1);
+   /* Expand the underline on hover */
+   transform-origin: right;
+}
+
+
+
+
+.ag-theme-alpine {
+   overflow-x: hidden;
+   width: 100vw;
+   height: 100%;
+   border: 1px solid black;
+}
+
+.adminMain {
+   width: 100vw;
+   height: 90vh;
+   display: flex;
+   justify-content: left;
+}
+
+.adminSections {
+   margin: 0 auto;
+}
+
+
+@media screen and (max-width: 600px) {
+   .admin-title {
+      font-size: 24px;
+      margin-bottom: 5px;
    }
- 
- 
-   @media screen and (max-width: 600px) {
-    .adminHeader > h2 {
-       font-size: 24px; /* Adjust the font size as needed for mobile */
-       margin-bottom: 5px; /* Adjust the margin as needed for mobile */
-    }
-  }
+}

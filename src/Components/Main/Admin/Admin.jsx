@@ -15,8 +15,8 @@ export default function Admin() {
 
     return (
         <div className="adminContainer">
-            <div className="adminHeader">
-                <h2>Admin Panel</h2>
+            <div className="admin-header">
+                <h1 className="admin-title">Admin Panel</h1>
             </div>
             <div className="adminMain">
                 <>
