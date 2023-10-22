@@ -39,7 +39,6 @@ const WhyUnity = () => {
     <>
       <Header />
       <div className="WhyUnity">
-        <Container>
           <div className='UnityWhyTab'>
             <Breadcrumb>
               <Breadcrumb.Item href="#">Home</Breadcrumb.Item>
@@ -47,6 +46,7 @@ const WhyUnity = () => {
             </Breadcrumb>
             <h1 style={{ textAlign: "center" }}>why Unity</h1>
           </div>
+        <Container>
 
           {accordionItems}
         </Container>

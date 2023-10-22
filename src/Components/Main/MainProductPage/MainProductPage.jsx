@@ -11,10 +11,10 @@ import OurNews from '../../Main/OurNews/OurNews';
 import OurProjects from '../../Main/OurProjects/OurProjects';
 
 const MainProductPage = () => {
-
   return (
     <div className="page-content">
       <Container className="mobile-carousel-container">
+        {/* Carousel Component */}
         <Carousel interval={5000}>
           <Carousel.Item>
             <img
@@ -44,45 +44,26 @@ const MainProductPage = () => {
         <Container>
           <Row>
             <Col xs={12} md={6}>
-              <h2>Who we are</h2>
+              <h1>Who we are</h1>
               <p>
                 Some text or description about the content goes here.
               </p>
               <Button variant="primary">Read More</Button>
             </Col>
             <Col xs={12} md={6}>
-              {/* Image 2 */}
               <Image src={sampleImage} thumbnail />
             </Col>
           </Row>
         </Container>
       </div>
 
-      <div>
+      <Container className="component-container">
         <OurServices />
-      </div>
-
-      <div>
         <OurSolutions />
-      </div>
-
-      <div>
         <OurProjects />
-      </div>
-
-      <div>
         <OurProducts />
-      </div>
-
-      <div>
         <OurNews />
-      </div>
-
-
-
-
-
-      
+      </Container>
     </div>
   );
 }
