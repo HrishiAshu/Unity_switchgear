@@ -1,44 +1,76 @@
 import React from 'react';
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
-import './OurSolutions.css';
-import { Container } from 'react-bootstrap';
-import Col from 'react-bootstrap/Col';
-import Row from 'react-bootstrap/Row';
+import './OurSolutions.css'; // Import your CSS file
+
+const courses = [
+
+
+    
+  {
+    title: 'UI/Web & Graph',
+    startDate: '04.11.2022',
+  },
+  {
+    title: 'Mobile Design',
+  },
+  {
+    title: 'Annual package',
+    startDate: '04.11.2022',
+  },
+  {
+    title: 'Graphic Design',
+    startDate: '04.11.2022',
+  },
+  {
+    title: 'Motion Design',
+    startDate: '30.11.2022',
+  },
+  {
+    title: 'Front-end development',
+  },
+  {
+    title: 'Digital Marketing',
+  },
+  {
+    title: 'Interior Design',
+    startDate: '31.10.2022',
+  },
+];
 
 const OurSolutions = () => {
-    const solutions = [
-        { id: 1, name: 'Service 1', Desc: "DB Box, Fan, HRC Fuse, Meter, Industrial Light Shed, Cable Tray & Trunking System, Switch & Sockets, LED Street Light, MCCB, MCB, Contractors, ACB, ELCB, MPCB, RCCB, RCBO" },
-        { id: 2, name: 'Service 2', Desc: "DB Box, Fan, HRC Fuse, Meter, Industrial Light Shed, Cable Tray & Trunking System, Switch & Sockets, LED Street Light, MCCB, MCB, Contractors, ACB, ELCB, MPCB, RCCB, RCBO" },
-        { id: 3, name: 'Service 3', Desc: "DB Box, Fan, HRC Fuse, Meter, Industrial Light Shed, Cable Tray & Trunking System, Switch & Sockets, LED Street Light, MCCB, MCB, Contractors, ACB, ELCB, MPCB, RCCB, RCBO" },
-        { id: 4, name: 'Service 4', Desc: "DB Box, Fan, HRC Fuse, Meter, Industrial Light Shed, Cable Tray & Trunking System, Switch & Sockets, LED Street Light, MCCB, MCB, Contractors, ACB, ELCB, MPCB, RCCB, RCBO" },
-        { id: 5, name: 'Service 5', Desc: "DB Box, Fan, HRC Fuse, Meter, Industrial Light Shed, Cable Tray & Trunking System, Switch & Sockets, LED Street Light, MCCB, MCB, Contractors, ACB, ELCB, MPCB, RCCB, RCBO" },
-        { id: 6, name: 'Service 6', Desc: "DB Box, Fan, HRC Fuse, Meter, Industrial Light Shed, Cable Tray & Trunking System, Switch & Sockets, LED Street Light, MCCB, MCB, Contractors, ACB, ELCB, MPCB, RCCB, RCBO" },
-        { id: 7, name: 'Service 7', Desc: "DB Box, Fan, HRC Fuse, Meter, Industrial Light Shed, Cable Tray & Trunking System, Switch & Sockets, LED Street Light, MCCB, MCB, Contractors, ACB, ELCB, MPCB, RCCB, RCBO" },
-        { id: 8, name: 'Service 8', Desc: "DB Box, Fan, HRC Fuse, Meter, Industrial Light Shed, Cable Tray & Trunking System, Switch & Sockets, LED Street Light, MCCB, MCB, Contractors, ACB, ELCB, MPCB, RCCB, RCBO" },
-        { id: 9, name: 'Service 9', Desc: "DB Box, Fan, HRC Fuse, Meter, Industrial Light Shed, Cable Tray & Trunking System, Switch & Sockets, LED Street Light, MCCB, MCB, Contractors, ACB, ELCB, MPCB, RCCB, RCBO" },
-    ];
+    const itemsRef = React.useRef([]);
 
-    return (
-        <div className="OurSolutionsHomePage">
-            <Container>
-                <h2 style={{ textAlign: "center" }}>Our Solutions</h2>
-                <Row>
-                    {solutions.map((solution) => (
-                        <Col key={solution.id} xs={12} sm={6} md={4}>
-                            <Card className="service-card" style={{ width: '18rem' }}>
-                                <Card.Body>
-                                    <Card.Title>{solution.name}</Card.Title>
-                                    <Card.Text>{solution.Desc}</Card.Text>
-                                    <Button variant="primary">View More</Button>
-                                </Card.Body>
-                            </Card>
-                        </Col>
-                    ))}
-                </Row>
-            </Container>
+    React.useEffect(() => {
+      const handleScroll = () => {
+        itemsRef.current.forEach((item, index) => {
+          const itemTop = item.getBoundingClientRect().top;
+          const windowHeight = window.innerHeight;
+  
+          if (itemTop < windowHeight * 0.75) {
+            item.classList.add('show');
+          }
+        });
+      };
+  
+      window.addEventListener('scroll', handleScroll);
+      return () => {
+        window.removeEventListener('scroll', handleScroll);
+      };
+    }, []);
+  return (
+    <div className="ag-format-container">
+    <h2 style={{ textAlign: 'center' }}>Our Solutions</h2>
+    <div className="ag-courses_box">
+      {courses.map((course, index) => (
+        <div className="ag-courses_item" key={index} ref={(el) => (itemsRef.current[index] = el)}>
+          <a className="ag-courses-item_link">
+            <div className="ag-courses-item_bg"></div>
+            <div className="ag-courses-item_title">{course.title}</div>
+          </a>
         </div>
-    );
+      ))}
+    </div>
+  </div>
+  );
 };
 
 export default OurSolutions;

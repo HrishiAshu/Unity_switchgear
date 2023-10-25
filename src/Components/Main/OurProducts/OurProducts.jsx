@@ -1,36 +1,70 @@
-import React from 'react';
-import { Container, Row, Col, Card } from 'react-bootstrap';
+import React, { useState } from 'react';
 import './OurProducts.css';
 
 const OurProducts = () => {
-  const services = [
-    { id: 1, name: 'Product 1' },
-    { id: 2, name: 'Product 2' },
-    { id: 3, name: 'Product 3' },
-    { id: 4, name: 'Product 4' },
-    { id: 5, name: 'Product 5' },
-    { id: 6, name: 'Product 6' },
-    { id: 7, name: 'Product 7' },
-    { id: 8, name: 'Product 8' },
-    { id: 9, name: 'Product 9' },
+  const [isFlipped, setIsFlipped] = useState(Array(9).fill(false)); // Initialize an array to keep track of the flipped state for each card
+
+  const cardData = [
+    {
+      title: 'Card 1',
+      description: 'Description for Card 1.',
+    },
+    {
+      title: 'Card 2',
+      description: 'Description for Card 2.',
+    },
+    {
+      title: 'Card 3',
+      description: 'Description for Card 3.',
+    },
+    {
+      title: 'Card 4',
+      description: 'Description for Card 4.',
+    },
+    {
+      title: 'Card 5',
+      description: 'Description for Card 5.',
+    },
+    {
+      title: 'Card 6',
+      description: 'Description for Card 6.',
+    },
+    {
+      title: 'Card 7',
+      description: 'Description for Card 7.',
+    },
+    {
+      title: 'Card 8',
+      description: 'Description for Card 8.',
+    },
+    {
+      title: 'Card 9',
+      description: 'Description for Card 9.',
+    },
   ];
 
+  const flipCard = (index) => {
+    const newFlippedState = [...isFlipped];
+    newFlippedState[index] = !newFlippedState[index];
+    setIsFlipped(newFlippedState);
+  };
+
   return (
-    <div className="OurServicesHomePage">
-      <Container>
-        <h2 style={{ textAlign: "center" }}>Our Products</h2>
-        <Row>
-          {services.map((service) => (
-            <Col key={service.id} xs={12} sm={6} md={4}>
-              <Card className="product-card">
-                <Card.Body>
-                  <Card.Title>{service.name}</Card.Title>
-                </Card.Body>
-              </Card>
-            </Col>
-          ))}
-        </Row>
-      </Container>
+    <div className="card-grid">
+      {cardData.map((card, index) => (
+        <div
+          key={index}
+          className={`flippable-card ${isFlipped[index] ? 'flipped' : ''}`}
+          onClick={() => flipCard(index)}
+        >
+          <div className="card__side card__side--front">
+            <h2 className="card__title">{card.title}</h2>
+          </div>
+          <div className="card__side card__side--back">
+            <p className="card__description">{card.description}</p>
+          </div>
+        </div>
+      ))}
     </div>
   );
 };

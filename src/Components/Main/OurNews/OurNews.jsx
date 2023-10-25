@@ -1,60 +1,63 @@
-import React, { useState } from 'react';
-import { Container, Row, Col, Card } from 'react-bootstrap';
-
+import React from 'react';
 import './OurNews.css';
-import sampleImage from '../../Main/Sources/sampleImage.jpg';
 
 const OurNews = () => {
-  const [flippedCard, setFlippedCard] = useState(null);
-
-  const newsData = [
+  const articlesData = [
     {
-      title: 'News Title 1',
-      description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas cupiditate molestiae impedit exercitationem recusandae expedita earum, id eligendi accusamus deleniti..',
+      id: 1,
+      imageUrl: 'https://picsum.photos/id/1011/800/450',
+      title: 'This is some title 1',
+      content:
+        'Curabitur convallis ac quam vitae laoreet. Nulla mauris ante, euismod sed lacus sit amet, congue bibendum eros. Etiam mattis lobortis porta. Vestibulum ultrices iaculis enim imperdiet egestas.',
     },
     {
-      title: 'News Title 2',
-      description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas cupiditate molestiae impedit exercitationem recusandae expedita earum, id eligendi accusamus deleniti..',
+      id: 2,
+      imageUrl: 'https://picsum.photos/id/1005/800/450',
+      title: 'This is some title 2',
+      content:
+        'Curabitur convallis ac quam vitae laoreet. Nulla mauris ante, euismod sed lacus sit amet, congue bibendum eros. Etiam mattis lobortis porta. Vestibulum ultrices iaculis enim imperdiet egestas.',
     },
     {
-      title: 'News Title 3',
-      description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas cupiditate molestiae impedit exercitationem recusandae expedita earum, id eligendi accusamus deleniti..',
+      id: 3,
+      imageUrl: 'https://picsum.photos/id/103/800/450',
+      title: 'This is some title 3',
+      content:
+        'Curabitur convallis ac quam vitae laoreet. Nulla mauris ante, euismod sed lacus sit amet, congue bibendum eros. Etiam mattis lobortis porta. Vestibulum ultrices iaculis enim imperdiet egestas.',
     },
   ];
 
-  const handleCardClick = (index) => {
-    setFlippedCard(index);
-  };
-
   return (
-    <div className="OurNews">
-      <Container>
-        <Row>
-          {newsData.map((news, index) => (
-            <Col key={index} md={4} sm={6}>
-              <Card
-                className={`News-card ${flippedCard === index ? 'flipped' : ''}`}
-                style={{ marginBottom: '20px' }}
-                onClick={() => handleCardClick(index)}
-              >
-                <div className="card-front">
-                  <Card.Img variant="top" src={sampleImage} />
-                  <Card.Body>
-                    <Card.Title>{news.title}</Card.Title>
-                    <Card.Text>Click for Description</Card.Text>
-                  </Card.Body>
-                </div>
-                <div className="card-back">
-                  <Card.Body>
-                    <Card.Title>Description</Card.Title>
-                    <Card.Text>{news.description}</Card.Text>
-                  </Card.Body>
-                </div>
-              </Card>
-            </Col>
-          ))}
-        </Row>
-      </Container>
+    <div className="HomeOfNews">
+      <section className="articles">
+        {articlesData.map((article, index) => (
+          <article key={article.id} className={index % 2 === 0 ? 'business' : ''}>
+            <div className="article-wrapper">
+              <figure>
+                <img src={article.imageUrl} alt="" />
+              </figure>
+              <div className="article-body">
+                <h2>{article.title}</h2>
+                <p>{article.content}</p>
+                <a className="read-more">
+                  Read more <span className="sr-only">about {article.title}</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="icon"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                      clipRule="evenodd"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+        ))}
+      </section>
     </div>
   );
 };

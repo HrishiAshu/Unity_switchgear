@@ -9,42 +9,18 @@ import OurSolutions from '../../Main/OurSolutions/OurSolutions';
 import OurProducts from '../../Main/OurProducts/OurProducts';
 import OurNews from '../../Main/OurNews/OurNews';
 import OurProjects from '../../Main/OurProjects/OurProjects';
+import Slider from '../../Main/Carousol/Slider';
 
 const MainProductPage = () => {
   return (
     <div className="page-content">
-      <Container className="mobile-carousel-container">
-        {/* Carousel Component */}
-        <Carousel interval={5000}>
-          <Carousel.Item>
-            <img
-              className="d-block w-100"
-              src={sampleImage}
-              alt="First slide"
-            />
-          </Carousel.Item>
-          <Carousel.Item>
-            <img
-              className="d-block w-100"
-              src={sampleImage}
-              alt="Second slide"
-            />
-          </Carousel.Item>
-          <Carousel.Item>
-            <img
-              className="d-block w-100"
-              src={sampleImage}
-              alt="Third slide"
-            />
-          </Carousel.Item>
-        </Carousel>
-      </Container>
+      <Slider />
 
       <div className="HomepageWhoWeAre">
         <Container>
           <Row>
             <Col xs={12} md={6}>
-              <h1>Who we are</h1>
+              <h2>Who we are</h2>
               <p>
                 Some text or description about the content goes here.
               </p>
