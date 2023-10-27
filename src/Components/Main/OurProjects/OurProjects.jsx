@@ -1,5 +1,6 @@
 import React from 'react';
 import './OurProjects.css';
+import ProjectImg from "../Sources/switchgear.jpg"
 
 const thumbnailData = [
   {
@@ -34,13 +35,13 @@ const OurProjects = () => {
 
   return (
     <div className="main-container">
-      <h2 style={{ textAlign: "center" }}>Our Projects</h2>
+      <h2 style={{ textAlign: "center" ,fontFamily:" Garamond, serif" }}>Our Projects</h2>
 
       <div className="main-row">
         {thumbnailData.map((item) => (
           <div className="thumb-box" key={item.id}>
             <a href="#" className="thumb-link" onClick={handleLinkClick}>
-              <img src={item.imageSrc} alt={`Image ${item.id}`} />
+              <img src={ProjectImg} alt={`Image ${item.id}`} />
               <div className="overlay-box">
                 <span className="meta">{item.date}</span>
                 <span className="main-title">{item.title}</span>

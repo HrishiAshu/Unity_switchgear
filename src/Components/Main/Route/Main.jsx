@@ -21,17 +21,10 @@ const Main = () => {
                     <Route path='/WhyUnity' element={<WhyUnity />} />
                     <Route path='/OurHistory' element={<OurHistory />} />
                     <Route path='/Solutions' element={<Solutions />} />
-                     <Route path='/Projects' element={<Projects />} />
+                    <Route path='/Projects' element={<Projects />} />
                     <Route path='/Press' element={<Press />} />
                     <Route path='/Products' element={<Products />} />
-
-
                     <Route path='/ContactUs' element={<ContactUsForm />} />
-
-
-
-
-
                 </Routes>
             </BrowserRouter>
         </div>

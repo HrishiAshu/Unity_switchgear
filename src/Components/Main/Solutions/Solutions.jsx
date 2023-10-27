@@ -15,7 +15,7 @@ const Solutions = () => {
               <Breadcrumb.Item href="#">Home</Breadcrumb.Item>
               <Breadcrumb.Item href="#">Solutions</Breadcrumb.Item>
             </Breadcrumb>
-            <h1 style={{ textAlign: "center" }}> Solutions  </h1>
+            <h1 style={{ textAlign: "center" ,fontFamily:" Garamond, serif" }}> Solutions  </h1>
           </div>
         <OurSolutions />
   <Footer />

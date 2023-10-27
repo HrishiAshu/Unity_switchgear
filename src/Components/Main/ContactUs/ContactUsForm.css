@@ -1,1 +1,82 @@
- 
+.contact-us-form {
+    max-width: 600px;
+    margin: 0 auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    padding-inline: 10px;
+  }
+  
+  .contact-title {
+    text-align: center;
+    font-family: Garamond, serif;
+    font-weight: 500;
+    font-size: 3rem;
+    margin-bottom: 20px; /* Add margin for spacing */
+  }
+  
+  .contact-container {
+    display: flex;
+    flex-wrap: wrap; 
+    margin-top: 10%;
+  }
+  
+  .contact-form {
+    flex: 1;
+    padding: 20px;
+    margin-right: 10px; 
+    border: 1px solid black;
+  }
+  
+  .contact-details {
+    flex: 1 1px;
+    padding: 20px;
+     width: 10px;
+     border: 1px solid black;
+    font-family: Garamond, serif;
+
+  }
+  
+  .form-body {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-input {
+    margin-bottom: 10px;
+  }
+  
+  label {
+    font-weight: bold;
+  }
+  
+  input,
+  textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+  }
+  
+  .submit-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .submit-button:hover {
+    background-color: #0056b3;
+  }
+  
+  @media (max-width: 768px) {
+    .contact-form, .contact-details {
+      flex: 1 100%;  
+      margin-right: 0; 
+    }
+  }
+  

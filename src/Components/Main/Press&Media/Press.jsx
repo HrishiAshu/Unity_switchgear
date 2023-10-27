@@ -16,7 +16,7 @@ const Press = () => {
                   <Breadcrumb.Item href="#">Home</Breadcrumb.Item>
                   <Breadcrumb.Item href="#">Solutions</Breadcrumb.Item>
                 </Breadcrumb>
-                <h1 style={{ textAlign: "center" }}> Press & Media  </h1>
+                <h1 style={{ textAlign: "center" ,fontFamily:" Garamond, serif" }}> Press & Media  </h1>
               </div>
             <OurNews />
       <Footer />

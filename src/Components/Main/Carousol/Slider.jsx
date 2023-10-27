@@ -1,23 +1,49 @@
-import React, { useState } from 'react';
+import React,{useState} from 'react'
 import "./Slider.css"
 
-function Slider(props) {
-    const settings = {
-        dots: true,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 4000,
-      };
+import Carimage from "../Sources/pexels-pok-rie-157827.jpg"
+const Slider = () => {
+  const images = [
+    'image1.jpg',
+    'image2.jpg',
+    'image3.jpg',
+    'image4.jpg',
+   ];
+  const [currentIndex, setCurrentIndex] = useState(0);
 
+  const nextSlide = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === 0 ? images.length - 1 : prevIndex - 1
+    );
+  };
   return (
-   <div>
-    hi
-   </div>
-  );
+    <div className="manual-carousel">
+    <div className="carousel-container">
+      <div
+        className="carousel-slider"
+        style={{
+          transform: `translateX(-${currentIndex * 100}%)`,
+        }}
+      >
+        {images.map((image, index) => (
+          <div key={index} className="carousel-slide">
+            <img src={Carimage} alt={`Image ${index}`} />
+          </div>
+        ))}
+      </div>
+    </div>
+    <button className="prev-button" onClick={prevSlide}>
+    &lt;
+    </button>
+    <button className="next-button" onClick={nextSlide}>
+    &gt;
+    </button>
+  </div>
+  )
 }
 
-export default Slider;
- 
+export default Slider

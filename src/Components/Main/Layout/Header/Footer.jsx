@@ -43,7 +43,7 @@ const Footer = () => {
               <div className="col-xl-4 col-lg-4 mb-50">
                 <div className="footer-widget">
                   <div className="footer-logo">
-                    <a href="index.html">
+                    <a>
                       <img
                         src={sampleImage}
                         className="img-fluid"
@@ -52,7 +52,7 @@ const Footer = () => {
                     </a>
                   </div>
                   <div className="footer-text">
-                    <p>
+                    <p className='paraOfFooter'>
                       Lorem ipsum dolor sit amet, consec tetur adipisicing elit,
                       sed do eiusmod tempor incididuntut consec tetur adipisicing
                       elit,Lorem ipsum dolor sit amet.
@@ -67,24 +67,24 @@ const Footer = () => {
                   </div>
                   <ul>
                     <li>
-                      <a href="#">Home</a>
+                      <a>Home</a>
                     </li>
-                   
-                
-                 
-              
+
+
+
+
                     <li>
-                      <a href="#">About us</a>
-                    </li>
-                    <li>
-                      <a href="#">Our Services</a>
-                    </li>
-                    
-                    <li>
-                      <a href="#">Contact us</a>
+                      <a>About us</a>
                     </li>
                     <li>
-                      <a href="#">Latest News</a>
+                      <a>Our Services</a>
+                    </li>
+
+                    <li>
+                      <a>Contact us</a>
+                    </li>
+                    <li>
+                      <a>Latest News</a>
                     </li>
                   </ul>
                 </div>
@@ -95,13 +95,13 @@ const Footer = () => {
                     <h3>Follow Us</h3>
                   </div>
                   <div className="footer-social-icon">
-                    <a href="#">
+                    <a>
                       <i className="fab fa-facebook-f facebook-bg"></i>
                     </a>
-                    <a href="#">
+                    <a>
                       <i className="fab fa-twitter twitter-bg"></i>
                     </a>
-                    <a href="#">
+                    <a >
                       <i className="fab fa-google-plus-g google-bg"></i>
                     </a>
                   </div>
@@ -115,7 +115,7 @@ const Footer = () => {
             <div className="row">
               <div className="col-xl-6 col-lg-6 text-center text-lg-left">
                 <div className="copyright-text">
-                  <p>
+                  <p className='paraOfFooter'>
                     Copyright &copy; 2018, All Right Reserved Hrishi
                   </p>
                 </div>
@@ -124,19 +124,19 @@ const Footer = () => {
                 <div className="footer-menu">
                   <ul>
                     <li>
-                      <a href="#">Home</a>
+                      <a>Home</a>
                     </li>
                     <li>
-                      <a href="#">Terms</a>
+                      <a>Terms</a>
                     </li>
                     <li>
-                      <a href="#">Privacy</a>
+                      <a>Privacy</a>
                     </li>
                     <li>
-                      <a href="#">Policy</a>
+                      <a>Policy</a>
                     </li>
                     <li>
-                      <a href="#">Contact</a>
+                      <a>Contact</a>
                     </li>
                   </ul>
                 </div>

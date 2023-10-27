@@ -6,6 +6,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import 'bootstrap/dist/css/bootstrap.css';
 import { useNavigate } from 'react-router-dom';
+import header from "../../Sources/header.png"
 
 const Header = () => {
     const navigate = useNavigate();
@@ -26,9 +27,10 @@ const Header = () => {
     return (
         <div className="header-main-container">
             <div className="headerContent">
-                <Navbar  expand="lg" style={{
-                        backgroundColor: "#fff" ,fontFamily: "ABBvoice-Medium, sans-serif" , fontSize:"15px" , boxShadow:" rgba(99, 99, 99, 0.2) 0px 2px 8px 0px"  }} className=" fixed-top">
-                    <Container>
+                <Navbar expand="lg" style={{
+                    backgroundColor: "#fff", fontFamily: "ABBvoice-Medium, sans-serif", fontSize: "15px", boxShadow: " rgba(99, 99, 99, 0.2) 0px 2px 8px 0px"
+                }} className=" fixed-top">
+                    <Container style={{ background: { header } }}>
                         <Navbar.Brand href="#home">Unity</Navbar.Brand>
                         <Navbar.Toggle aria-controls="basic-navbar-nav" />
                         <Navbar.Collapse id="basic-navbar-nav">

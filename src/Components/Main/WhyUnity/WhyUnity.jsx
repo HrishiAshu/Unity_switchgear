@@ -35,8 +35,7 @@ const WhyUnity = () => {
           <h1 style={{ textAlign: "center" }}>why Unity</h1>
         </div>
         <Container>
-          <Slider />
-        </Container>
+         </Container>
       </div>
       <Footer />
     </>
