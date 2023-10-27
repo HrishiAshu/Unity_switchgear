@@ -57,8 +57,7 @@
   
   /* Add pop animation effect on hover */
   .nav-link:hover {
-    transform: scale(1.1); /* Scale the tab up to 110% of its original size on hover */
-    color: #ffcc00;
+     color: #ffcc00;
     transition: all 0.3s ease; /* Add a transition for the pop effect */
   }
   

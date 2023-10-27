@@ -1,5 +1,5 @@
 /* Footer.css */
-footer {
+.footer-section{
     padding: 30px 20px;
     background-color: #333; /* Background color for the footer */
   }
@@ -10,7 +10,7 @@ footer {
   }
   
   /* Style for the paragraph */
-  p {
+.paraOfFooter {
     color: #ccc; /* Paragraph text color */
   }
   
@@ -21,6 +21,13 @@ footer {
     transition: color 0.3s; /* Add a color transition effect */
   }
   
+.row{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+
   ul.list-unstyled a:houl {
     margin: 0px;
     padding: 0px;
@@ -55,6 +62,8 @@ footer {
 .footer-content {
   position: relative;
   z-index: 2;
+  color: white;
+
 }
 .footer-pattern img {
   position: absolute;
