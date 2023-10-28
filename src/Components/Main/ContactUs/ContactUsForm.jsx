@@ -1,98 +1,88 @@
 import React, { useState } from 'react';
 import './ContactUsForm.css';
-import { Container, Row, Col, Form, Button } from 'react-bootstrap';
-import Footer from '../Layout/Header/Footer';
 import Header from '../Layout/Header/Header';
+import Footer from '../Layout/Header/Footer';
 
 const ContactUsForm = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    subject: '',
     message: '',
   });
 
-  const handleChange = (e) => {
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
+  const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Send form data to your server for processing (not shown in this example).
-    // You should send an HTTP request to your server to handle email/WhatsApp sending.
-    // After successful submission, you can reset the form
-    setFormData({
-      name: '',
-      email: '',
-      subject: '',
-      message: '',
-    });
+    setIsSubmitted(true);
   };
 
   return (
     <>
       <Header />
-      <Container>
-        <Row>
-          <Col xs={12} md={6}>
-            <div className="ContactUsForm">
-              <h2>Contact Us</h2>
-              <Form onSubmit={handleSubmit}>
-                <Form.Group>
-                  <Form.Label>Name</Form.Label>
-                  <Form.Control
-                    type="text"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                  />
-                </Form.Group>
-                <Form.Group>
-                  <Form.Label>Email</Form.Label>
-                  <Form.Control
-                    type="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                  />
-                </Form.Group>
-                <Form.Group>
-                  <Form.Label>Subject</Form.Label>
-                  <Form.Control
-                    type="text"
-                    name="subject"
-                    value={formData.subject}
-                    onChange={handleChange}
-                  />
-                </Form.Group>
-                <Form.Group>
-                  <Form.Label>Message</Form.Label>
-                  <Form.Control
-                    as="textarea"
-                    rows={4}
-                    name="message"
-                    value={formData.message}
-                    onChange={handleChange}
-                  />
-                </Form.Group>
-                <Button variant="primary" type="submit">
-                  Send Message
-                </Button>
-              </Form>
+      <div className="contact-container">
+        <div style={{ width: "30px" }} className="contact-form">
+          <h2 className="contact-title">Contact Us</h2>
+          <form className="form-body" onSubmit={handleSubmit}>
+            <div className="form-input">
+              <label htmlFor="name">Name</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Please enter your name"
+                value={formData.name}
+                onChange={handleInputChange}
+              />
             </div>
-          </Col>
-          <Col xs={12} md={6}>
-            <div className="contact-info">
-              <h2>Contact Information</h2>
-              <p>123 Main Street</p>
-              <p>City, Country</p>
-              <p>Email: example@example.com</p>
-              <p>Phone: +123 456 7890</p>
+            <div className="form-input">
+              <label htmlFor="email">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Please enter your email"
+                value={formData.email}
+                onChange={handleInputChange}
+              />
             </div>
-          </Col>
-        </Row>
-      </Container>
+            <div className="form-input">
+              <label htmlFor="message">Message</label>
+              <textarea
+                id="message"
+                name="message"
+                placeholder="Please enter your message"
+                value={formData.message}
+                onChange={handleInputChange}
+              ></textarea>
+            </div>
+            <button type="submit" className="submit-button">
+              Submit
+            </button>
+          </form>
+          {isSubmitted && <p className="submission-message">Form submitted successfully!</p>}
+        </div>
+        <div className="contact-details">
+          <h2>Contact Details</h2>
+          <h3>Address</h3>
+          <span>4, Paradise Apartment, </span>
+          <span>Serene meadows,</span>
+          <span>Gangapur Road,</span>
+          <span>Nashik,Maharashtra India-422012</span>
+          <h3>Phone</h3>
+          <p> +91 9601296115
+            +91 8459298147</p>
+          <h3>Email</h3>
+          <p>
+            unity.switchgear@gmail.com
+            jagdish.nirgude@unityswitchgear.com</p>
+        </div>
+      </div>
       <Footer />
     </>
   );

@@ -1,44 +1,45 @@
 import React from 'react';
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
 import './OurSolutions.css';
-import { Container } from 'react-bootstrap';
-import Col from 'react-bootstrap/Col';
-import Row from 'react-bootstrap/Row';
+
 
 const OurSolutions = () => {
-    const solutions = [
-        { id: 1, name: 'Service 1', Desc: "DB Box, Fan, HRC Fuse, Meter, Industrial Light Shed, Cable Tray & Trunking System, Switch & Sockets, LED Street Light, MCCB, MCB, Contractors, ACB, ELCB, MPCB, RCCB, RCBO" },
-        { id: 2, name: 'Service 2', Desc: "DB Box, Fan, HRC Fuse, Meter, Industrial Light Shed, Cable Tray & Trunking System, Switch & Sockets, LED Street Light, MCCB, MCB, Contractors, ACB, ELCB, MPCB, RCCB, RCBO" },
-        { id: 3, name: 'Service 3', Desc: "DB Box, Fan, HRC Fuse, Meter, Industrial Light Shed, Cable Tray & Trunking System, Switch & Sockets, LED Street Light, MCCB, MCB, Contractors, ACB, ELCB, MPCB, RCCB, RCBO" },
-        { id: 4, name: 'Service 4', Desc: "DB Box, Fan, HRC Fuse, Meter, Industrial Light Shed, Cable Tray & Trunking System, Switch & Sockets, LED Street Light, MCCB, MCB, Contractors, ACB, ELCB, MPCB, RCCB, RCBO" },
-        { id: 5, name: 'Service 5', Desc: "DB Box, Fan, HRC Fuse, Meter, Industrial Light Shed, Cable Tray & Trunking System, Switch & Sockets, LED Street Light, MCCB, MCB, Contractors, ACB, ELCB, MPCB, RCCB, RCBO" },
-        { id: 6, name: 'Service 6', Desc: "DB Box, Fan, HRC Fuse, Meter, Industrial Light Shed, Cable Tray & Trunking System, Switch & Sockets, LED Street Light, MCCB, MCB, Contractors, ACB, ELCB, MPCB, RCCB, RCBO" },
-        { id: 7, name: 'Service 7', Desc: "DB Box, Fan, HRC Fuse, Meter, Industrial Light Shed, Cable Tray & Trunking System, Switch & Sockets, LED Street Light, MCCB, MCB, Contractors, ACB, ELCB, MPCB, RCCB, RCBO" },
-        { id: 8, name: 'Service 8', Desc: "DB Box, Fan, HRC Fuse, Meter, Industrial Light Shed, Cable Tray & Trunking System, Switch & Sockets, LED Street Light, MCCB, MCB, Contractors, ACB, ELCB, MPCB, RCCB, RCBO" },
-        { id: 9, name: 'Service 9', Desc: "DB Box, Fan, HRC Fuse, Meter, Industrial Light Shed, Cable Tray & Trunking System, Switch & Sockets, LED Street Light, MCCB, MCB, Contractors, ACB, ELCB, MPCB, RCCB, RCBO" },
-    ];
 
-    return (
-        <div className="OurSolutionsHomePage">
-            <Container>
-                <h2 style={{ textAlign: "center" }}>Our Solutions</h2>
-                <Row>
-                    {solutions.map((solution) => (
-                        <Col key={solution.id} xs={12} sm={6} md={4}>
-                            <Card className="service-card" style={{ width: '18rem' }}>
-                                <Card.Body>
-                                    <Card.Title>{solution.name}</Card.Title>
-                                    <Card.Text>{solution.Desc}</Card.Text>
-                                    <Button variant="primary">View More</Button>
-                                </Card.Body>
-                            </Card>
-                        </Col>
-                    ))}
-                </Row>
-            </Container>
+
+  return (
+    <>
+      <div className="headerOfSolutions">
+        <h1>Our Solutions</h1>
+        <h1>Reliable, efficient delivery</h1>
+        <h1>Powered by Technology</h1>
+        <p>Our Artificial Intelligence powered tools use millions of project data points to ensure that your project is successful</p>
+      </div>
+      <div className="containerOfSOLN">
+        <div className="box cyan">
+          <h2>Supervisor</h2>
+          <p>Monitors activity to identify project roadblocks</p>
+          <img src="https://assets.codepen.io/2301174/icon-supervisor.svg" alt="" />
         </div>
-    );
+
+        <div className="box red">
+          <h2>Team Builder</h2>
+          <p>Scans our talent network to create the optimal team for your project</p>
+          <img src="https://assets.codepen.io/2301174/icon-team-builder.svg" alt="" />
+        </div>
+
+        <div className="box blue">
+          <h2>Calculator</h2>
+          <p>Uses data from past projects to provide better delivery estimates</p>
+          <img src="https://assets.codepen.io/2301174/icon-calculator.svg" alt="" />
+        </div>
+
+        <div className="box orange">
+          <h2>Karma</h2>
+          <p>Regularly evaluates our talent to ensure quality</p>
+          <img src="https://assets.codepen.io/2301174/icon-karma.svg" alt="" />
+        </div>
+      </div>
+    </>
+  );
 };
 
 export default OurSolutions;

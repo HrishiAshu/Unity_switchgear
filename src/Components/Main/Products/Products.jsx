@@ -11,10 +11,10 @@ const Products = () => {
     <Header />
     <div className='ProductsTab'>
            <Breadcrumb>
-             <Breadcrumb.Item href="#">Home</Breadcrumb.Item>
-             <Breadcrumb.Item href="#">Products</Breadcrumb.Item>
+             <Breadcrumb.Item to="/">Home</Breadcrumb.Item>
+             <Breadcrumb.Item href="/products">Products</Breadcrumb.Item>
            </Breadcrumb>
-           <h1 style={{ textAlign: "center" }}> Products  </h1>
+           <h1 style={{ textAlign: "center" ,fontFamily:" Garamond, serif" }}> Products  </h1>
          </div>
        <OurProducts />
  <Footer />

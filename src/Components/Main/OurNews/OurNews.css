@@ -1,31 +1,95 @@
-.OurNews {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    margin-top: 5%;
-    gap: 10px;
-    margin-bottom: 10%;
+ .HomeOfNews {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   min-height: 100vh;
+   font-family: 'Arial', sans-serif;
+  }
+
+ .OurNewsTitle {
+   text-align: center;
+   margin: 10px;
+   font-family: Garamond, serif;
+   font-weight: 500;
+   font-size: 3rem;
+ }
+
+ .articles {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   gap: 20px;
+ }
+
+ article {
+   width: 350px;
+   border: 1px solid #ddd;
+   background-color: #fff;
+   padding: 1px;
+   overflow: hidden;
+   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+   transition: all ease-in-out 0.2s;
+ }
+
+ article:hover {
+   background: #eaeaea;
+ }
+
+ figure {
+   overflow: hidden;
+ }
+
+ article img {
+   max-width: 100%;
+   height: auto;
+   display: block;
+ }
+
+ .article-body {
+   padding: 20px;
+ }
+
+
+ .article-body>p {
+   font-family: Garamond, serif;
+ }
+
+.imag-container{
+  overflow: hidden;
 }
 
-.News-card {
-    margin: 5%;
-    width: 80%;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-
+.imag-container img{
+  transition: all ease-in-out 0.3s;
 }
-
-.News-card {
-    border: none;
-    background: #ffffff;
-    color: #000000 !important;
-    font-weight: 100;
-    padding: 20px;
-    text-transform: uppercase;
-    border-radius: 6px;
-    display: inline-block;
-    transition: all 0.3s ease 0s;
-    transition: ease-out;
+.imag-container :hover .img-img{
+  transform: scale(2);
 }
- 
+ .article-body>p {
+   font-size: 16px;
+   line-height: 1.5;
+   color: #666;
+   margin-bottom: 20px;
+   font-family: Garamond, serif;
+
+ }
+
+ a.read-more {
+   text-decoration: none;
+   color: #007bff;
+   display: inline-block;
+   font-family: -B, sans-serif;
+
+ }
+
+ .icon {
+   width: 16px;
+   height: 16px;
+   vertical-align: middle;
+   margin-left: 5px;
+ }
+
+ @media (max-width: 768px) {
+   article {
+     width: 100%;
+   }
+ }

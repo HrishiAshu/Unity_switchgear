@@ -21,7 +21,7 @@ export default function SideBar() {
   const navigate = useNavigate()
 
   return (
-    <div className='SideBarContent' style={{ display: 'flex', height: '110vh',  overflow: 'scroll initial' ,"boxShadow":" rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px" }}>
+    <div className='SideBarContent' style={{ display: 'flex', height: '110vh',  overflow: 'scroll initial' ,"boxShadow":"  rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px" }}>
   <CDBSidebar textColor="#000" backgroundColor="#fff"> 
     <CDBSidebarHeader prefix={<i className="fa fa-bars fa-large"></i>}>
       <a href="/" className="text-decoration-none" style={{ color: 'inherit' }}>
@@ -40,7 +40,7 @@ export default function SideBar() {
         {/* <NavLink exact to="" activeClassName="activeClicked">
           <CDBSidebarMenuItem icon="user">Profile page</CDBSidebarMenuItem>
         </NavLink> */}
-        <NavLink exact to="" activeClassName="activeClicked">
+        <NavLink exact to="/Admin/Analytics" activeClassName="activeClicked">
           <CDBSidebarMenuItem icon="chart-line">Analytics</CDBSidebarMenuItem>
         </NavLink>
       </CDBSidebarMenu>

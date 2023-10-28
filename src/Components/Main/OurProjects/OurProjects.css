@@ -1,16 +1,82 @@
-.Project-card {
-    width: 70%;
-    margin: 10px; /* Add some gap between the images */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    cursor: pointer;
-    overflow: hidden;
-  }
-  
-  .Project-card:hover {
-    transform: scale(1.05); /* Scale up the image on hover */
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2); /* Add a subtle shadow on hover */
-    opacity: 0.8; /* Reduce opacity for a fade effect on hover */
-  }
-  
+ /* OurProjects.css */
+
+.main-container {
+  max-width: 1140px;
+  margin: 0 auto;
+ }
+
+.main-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.thumb-box {
+  position: relative;
+}
+
+.thumb-link {
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.thumb-link:hover .overlay-box {
+  background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 1));
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlay-box {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 5%;
+  background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.75));
+  opacity: 0;
+  transition: opacity 0.4s ease-out;
+}
+
+.overlay-box:hover {
+  opacity: 1;
+}
+
+.meta {
+  font-size: 14px;
+  display: block;
+}
+
+.main-title {
+  font-size: 16px;
+  display: block;
+  font-weight: 700;
+  text-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
+}
+
+.description {
+  color: #ccc;
+  font-size: 13px;
+  margin-top: 5px;
+  display: block;
+  max-height: 0;
+  line-height: 18px;
+  overflow: hidden;
+  opacity: 0;
+  transition: opacity 0.4s ease-out, max-height 0.4s ease-out, margin 0.4s;
+}
+
+.thumb-link:hover .description {
+  opacity: 1;
+  max-height: 100px;
+  margin-top: 5px;
+  transition: opacity 0.4s ease-out, max-height 0.9s ease-out;
+}

@@ -1,43 +1,85 @@
-import React from 'react'
-import Card from 'react-bootstrap/Card';
-import Container from 'react-bootstrap/Container';
-import Col from "react-bootstrap/Col"
-import Row from 'react-bootstrap/Row'
+import React from 'react';
 import "./OurServices.css"
 
 
 const OurServices = () => {
-    const services = [
-        { id: 1, name: 'Service 1' },
-        { id: 2, name: 'Service 2' },
-        { id: 3, name: 'Service 3' },
-        { id: 4, name: 'Service 4' },
-        { id: 5, name: 'Service 5' },
-        { id: 6, name: 'Service 6' },
-        { id: 7, name: 'Service 7' },
-        { id: 8, name: 'Service 8' },
-        { id: 9, name: 'Service 9' },
-      ];
+  const data = [
+    {
+      value: '278',
+      title: 'New Posts',
+    },
+    {
+      value: '156',
+      title: 'New Comments',
+    },
+    {
+      value: '64.89 %',
+      title: 'Bounce Rate',
+    },
+    {
+      value: '423',
+      title: 'Total Visits',
+    },
+    {
+      value: '278',
+      title: 'New Posts',
+    },
+    {
+      value: '156',
+      title: 'New Comments',
+    },
+    {
+      value: '64.89 %',
+      title: 'Bounce Rate',
+    },
+    {
+      value: '423',
+      title: 'Total Visits',
+    },
+  ];
   return (
-    <div className="OurServicesHomePage">
- 
-    <Container>
-      
-        <h2 style={{textAlign:"center"}}>Our Services</h2>
-    <Row>
-      {services.map((service) => (
-        <Col key={service.id} xs={12} sm={6} md={4}>
-          <Card className="service-card">
-            <Card.Body>
-              <Card.Title>{service.name}</Card.Title>
-            </Card.Body>
-          </Card>
-        </Col>
-      ))}
-    </Row>
-  </Container>
-    </div>
-  )
-}
+    <div className="grey-bg container-fluid">
 
-export default OurServices
+      <section id="minimal-statistics">
+        <div className="row">
+          <div className="col-12 mt-3 mb-1">
+            <h4 className="text-uppercase">Our Services</h4>
+          </div>
+        </div>
+        <div className="row">
+          {data.map((item, index) => (
+            <div key={index} className="col-xl-3 col-sm-6 col-12">
+              <div className="card">
+                <div className="card-content">
+                  <div className="card-body">
+                    <div className="media d-flex">
+                      <div className="align-self-center">
+                        <i className={`icon-${item.icon} ${item.color} font-large-2 float-left`}></i>
+                      </div>
+                      <div className="media-body text-right">
+                        <h3>{item.value}</h3>
+                        <span>{item.title}</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section id="stats-subtitle">
+        <div className="row">
+          <div className="col-12 mt-3 mb-1">
+            <h4 className="text-down">To Serve with our world Class services...</h4>
+          </div>
+        </div>
+        <div className="row">
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export default OurServices;

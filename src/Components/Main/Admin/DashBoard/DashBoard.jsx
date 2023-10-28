@@ -10,7 +10,7 @@ import { useNavigate } from 'react-router-dom';
 
 const DashBoard = () => {
 
-  const products =[
+  const products = [
     {
       "Sr_no": "1",
       "product_name": "Prescription Glasses",
@@ -182,7 +182,7 @@ const DashBoard = () => {
       "image": "0000111100000111",
       "quantity": 2
     }
-  ] 
+  ]
 
   const navigate = useNavigate();
 
@@ -200,51 +200,51 @@ const DashBoard = () => {
 
     <>
 
-<div className="table-container">
-      <div className="DashboardTitle">
-        <Badge bg="info">Dashboard</Badge>
+      <div className="table-container">
+        <div className="DashboardTitle">
+          <Badge bg="info">Dashboard</Badge>
+        </div>
+
+        <div className="table-scroll">
+
+          <Table responsive="md" scroll borderless bordered hover>
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Sr_no</th>
+                <th>product_name</th>
+                <th>category</th>
+                <th>company_name</th>
+                <th>price</th>
+                <th>description</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              {products.map((product, index) => (
+                <tr key={index}>
+                  <td>{index + 1}</td>
+                  <td>{product.Sr_no}</td>
+                  <td>{product.product_name}</td>
+                  <td>{product.category}</td>
+                  <td>{product.company_name}</td>
+                  <td>{product.price}</td>
+                  <td>{product.description}</td>
+                  <td className="DashboardAction">
+                    <button onClick={handleEdit}>
+                      <MdModeEditOutline />
+                    </button>
+                    <button onClick={handleDelete}>
+                      <MdDelete />
+                    </button>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </Table>
+        </div>
+
       </div>
-
-<div className="table-scroll">
-
-      <Table responsive="md" scroll borderless bordered hover>
-        <thead>
-          <tr>
-            <th>#</th>
-            <th>Sr_no</th>
-            <th>product_name</th>
-            <th>category</th>
-            <th>company_name</th>
-            <th>price</th>
-            <th>description</th>
-            <th>Action</th>
-          </tr>
-        </thead>
-        <tbody>
-          {products.map((product, index) => (
-            <tr key={index}>
-              <td>{index + 1}</td>
-              <td>{product.Sr_no}</td>
-              <td>{product.product_name}</td>
-              <td>{product.category}</td>
-              <td>{product.company_name}</td>
-              <td>{product.price}</td>
-              <td>{product.description}</td>
-              <td className="DashboardAction">
-                <button onClick={handleEdit}>
-                  <MdModeEditOutline />
-                </button>
-                <button onClick={handleDelete}>
-                  <MdDelete />
-                </button>
-              </td>
-            </tr>
-          ))}
-        </tbody>
-      </Table>
-      </div>
-
-    </div>
     </>
   )
 }

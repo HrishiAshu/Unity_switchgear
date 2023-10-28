@@ -1,26 +1,29 @@
-/* Footer.css */
-footer {
+ .footer-section{
     padding: 30px 20px;
-    background-color: #333; /* Background color for the footer */
+    background-color: #333;
   }
   
-  /* Style for the h4 headings */
-  h4 {
-    color: #fff; /* Heading text color */
+   h4 {
+    color: #fff;  
   }
   
-  /* Style for the paragraph */
-  p {
-    color: #ccc; /* Paragraph text color */
+ .paraOfFooter {
+    color: #ccc; 
   }
   
-  /* Style for the links in the footer */
-  ul.list-unstyled a {
-    color: #ccc; /* Link text color */
-    text-decoration: none; /* Remove underlines from links */
-    transition: color 0.3s; /* Add a color transition effect */
+   ul.list-unstyled a {
+    color: #ccc;  
+    text-decoration: none;  
+    transition: color 0.3s; 
   }
   
+.row{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+
   ul.list-unstyled a:houl {
     margin: 0px;
     padding: 0px;
@@ -55,6 +58,8 @@ footer {
 .footer-content {
   position: relative;
   z-index: 2;
+  color: white;
+
 }
 .footer-pattern img {
   position: absolute;
@@ -181,28 +186,25 @@ footer {
   font-size: 14px;
   color: #878787;
 }ver {
-    color: #007bff; /* Link text color on hover */
+    color: #007bff;  
   }
   
-  /* Style for the copyright text */
+ 
   .text-center p {
-    color: #ccc; /* Text color */
+    color: #ccc; 
   }
   
-  /* Add padding to the bottom of the footer */
-  footer p:last-child {
+   footer p:last-child {
     padding-bottom: 20px;
   }
-  /* Add this CSS for mobile view */
-@media (max-width: 768px) {
+ @media (max-width: 768px) {
   .footer-cta .single-cta {
     text-align: center;
     margin-bottom: 20px;
   }
 }
 
-/* Add this CSS for desktop view */
-@media (min-width: 769px) {
+ @media (min-width: 769px) {
   .footer-cta .single-cta {
     float: left;
   }

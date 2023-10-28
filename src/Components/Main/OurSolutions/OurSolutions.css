@@ -1,23 +1,78 @@
-.service-card {
-    margin: 5%;
-    width: 18rem;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-    border: none;
-    background: #ffffff;
-    color: #000000 !important;
+/* OurSolutions.css */
+.headerOfSolutions {
+    text-align: center;
+    padding: 40px 0;
+    background-color: #ffffff;
+    color: #000000;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.35);
+}
+
+.headerOfSolutions > h1 {
+    font-size: 28px;
+    margin: 10px 0;
+    font-family: Garamond, serif;
     font-weight: 600;
-    border-radius: 6px;
-    display: inline-block;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease;
-    cursor: pointer;
-    transform: scale(1);
-  }
-  
-  .service-card:hover {
-    transform: scale(1.05); /* Scale up the card on hover */
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; /* Add a subtle shadow on hover */
-    background-color: #ff3333c7; /* Change the background color on hover */
-    color: #fff; /* Change the text color on hover */
-  }
-  
+}
+
+.containerOfSOLN {
+    margin-top: 5%;
+}
+
+.row1-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.row2-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.box {
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin: 10px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.box h2 {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.box p {
+    font-size: 16px;
+    color: #555;
+    margin: 10px 0;
+}
+
+.box img {
+    width: 60px;
+    height: 60px;
+}
+
+.solutions_Footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #007bff;
+    color: #fff;
+}
+
+.attribution a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.attribution a:hover {
+    text-decoration: underline;
+}
+
+

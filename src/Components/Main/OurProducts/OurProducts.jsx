@@ -1,38 +1,94 @@
-import React from 'react';
-import { Container, Row, Col, Card } from 'react-bootstrap';
-import './OurProducts.css';
-
+import React from 'react'
+import "./OurProducts.css"
+import electricalImg from "../Sources/electricity-generation-transmission-distribution-guides.jpg"
 const OurProducts = () => {
-  const services = [
-    { id: 1, name: 'Product 1' },
-    { id: 2, name: 'Product 2' },
-    { id: 3, name: 'Product 3' },
-    { id: 4, name: 'Product 4' },
-    { id: 5, name: 'Product 5' },
-    { id: 6, name: 'Product 6' },
-    { id: 7, name: 'Product 7' },
-    { id: 8, name: 'Product 8' },
-    { id: 9, name: 'Product 9' },
+  const articlesData = [
+    {
+      id: 1,
+      imageUrl: 'https://picsum.photos/id/1011/800/450',
+      title: 'This is some title 1',
+      content:
+        "Lorem 1"
+    },
+    {
+      id: 2,
+      imageUrl: 'https://picsum.photos/id/1005/800/450',
+      title: 'This is some title 2',
+      content:
+        "lorem 2"
+    },
+    {
+      id: 3,
+      imageUrl: 'https://picsum.photos/id/103/800/450',
+      title: 'This is some title 3',
+      content:
+        "lorem 3"
+    },
+    {
+      id: 1,
+      imageUrl: 'https://picsum.photos/id/1011/800/450',
+      title: 'This is some title 1',
+      content:
+        "lorem 4"
+    },
+    {
+      id: 2,
+      imageUrl: 'https://picsum.photos/id/1005/800/450',
+      title: 'This is some title 2',
+      content:
+        "lorem 5"
+    },
+    {
+      id: 3,
+      imageUrl: 'https://picsum.photos/id/103/800/450',
+      title: 'This is some title 3',
+      content:
+        "lorem 6"
+    },
+    {
+      id: 1,
+      imageUrl: 'https://picsum.photos/id/1011/800/450',
+      title: 'This is some title 1',
+      content:
+        "lorem 7"
+    },
+    {
+      id: 2,
+      imageUrl: 'https://picsum.photos/id/1005/800/450',
+      title: 'This is some title 2',
+      content:
+        "lorem 8"
+    },
+
   ];
 
-  return (
-    <div className="OurServicesHomePage">
-      <Container>
-        <h2 style={{ textAlign: "center" }}>Our Products</h2>
-        <Row>
-          {services.map((service) => (
-            <Col key={service.id} xs={12} sm={6} md={4}>
-              <Card className="product-card">
-                <Card.Body>
-                  <Card.Title>{service.name}</Card.Title>
-                </Card.Body>
-              </Card>
-            </Col>
-          ))}
-        </Row>
-      </Container>
-    </div>
-  );
-};
+  const handleProductOverView = () => {
+    alert("Product overview")
+  }
 
-export default OurProducts;
+  return (
+    <>
+      <h2 className='OurProductTitle'>our Products</h2>
+      <div className="HomeOfProduct">
+
+        <section className="ProductArticles">
+          {articlesData.map((article, index) => (
+            <article className="productArticle" key={article.id}>
+              <div className="article-wrapper">
+                <figure>
+                  <img src={electricalImg} alt="" />
+                </figure>
+                <div className="ProductArticle-body">
+                  <p onClick={handleProductOverView}>{article.content}</p>
+
+                </div>
+              </div>
+            </article>
+          ))}
+        </section>
+      </div>
+    </>
+  )
+}
+
+export default OurProducts
