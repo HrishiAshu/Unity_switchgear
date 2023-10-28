@@ -1,7 +1,13 @@
-import React from 'react'
-import "./OurProducts.css"
+import React, { useState } from 'react';
+import "./OurProducts.css";
+import PdfModal from './PdfModal'; // Import the PdfModal component
 import electricalImg from "../Sources/electricity-generation-transmission-distribution-guides.jpg"
+import pdf from "../Sources/Sample Product Description.pdf"
+
 const OurProducts = () => {
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+  const [selectedPdfUrl, setSelectedPdfUrl] = useState('');
+
   const articlesData = [
     {
       id: 1,
@@ -62,33 +68,40 @@ const OurProducts = () => {
 
   ];
 
-  const handleProductOverView = () => {
-    alert("Product overview")
-  }
+  const handleProductOverView = (pdfUrl) => {
+    setSelectedPdfUrl(pdfUrl);
+    setModalIsOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalIsOpen(false);
+  };
 
   return (
     <>
       <h2 className='OurProductTitle'>our Products</h2>
       <div className="HomeOfProduct">
-
         <section className="ProductArticles">
           {articlesData.map((article, index) => (
             <article className="productArticle" key={article.id}>
-              <div className="article-wrapper">
+              <div className="article-wrapper_Products">
                 <figure>
                   <img src={electricalImg} alt="" />
                 </figure>
                 <div className="ProductArticle-body">
-                  <p onClick={handleProductOverView}>{article.content}</p>
-
+                  <p onClick={() => handleProductOverView(article.pdfUrl)}>
+                    {article.content}
+                  </p>
                 </div>
               </div>
             </article>
           ))}
         </section>
       </div>
-    </>
-  )
-}
 
-export default OurProducts
+      <PdfModal isOpen={modalIsOpen} closeModal={closeModal} pdfUrl={pdf} />
+    </>
+  );
+};
+
+export default OurProducts;

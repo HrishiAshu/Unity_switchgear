@@ -49,19 +49,14 @@
     right: 0;
     font-size: x-large;
     background-color: white;
-    /* Set a background color to make it stand out */
-    z-index: 1;
-    /* Ensure it's above the form content */
-    padding: 10px 0;
-    /* Add some padding to improve spacing */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    /* Add a shadow for separation */
-}
+     z-index: 1;
+     padding: 10px 0;
+     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+ }
 
 .scrollable-form {
     max-height: 200vh;
-    /* Set a maximum height for the scrollable area */
-    overflow-y: auto;
+     overflow-y: auto;
 }
 
 ::-webkit-scrollbar {

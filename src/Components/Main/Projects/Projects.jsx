@@ -6,17 +6,21 @@ import OurProjects from '../OurProjects/OurProjects'
 import "./Projects.css"
 
 const Projects = () => {
+    const breadcrumbItems = [
+        { label: 'Home', link: '/' },
+        { label: 'Our Projects' },
+    ];
     return (
         <>
             <Header />
-            <div className='ProductsTab'>
-                <Breadcrumb>
-                    <Breadcrumb.Item href="#">Home</Breadcrumb.Item>
-                    <Breadcrumb.Item href="#">Projects</Breadcrumb.Item>
-                </Breadcrumb>
-
-                <h1 style={{ textAlign: "center", fontFamily: " Garamond, serif" }}> Projects  </h1>
-            </div>
+            <div className='UnityWhyTab'>
+                    <Breadcrumb>
+                        {breadcrumbItems.map((item, index) => (
+                            <Breadcrumb.Item key={index} href={item.link}>{item.label}</Breadcrumb.Item>
+                        ))}
+                    </Breadcrumb>
+                    <h1 className='headingOfHistory' style={{ textAlign: "center" }}>  Our Projects</h1>
+                </div>
             <div className="TabProject">
 
                 <OurProjects />

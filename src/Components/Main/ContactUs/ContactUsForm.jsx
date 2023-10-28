@@ -26,7 +26,7 @@ const ContactUsForm = () => {
     <>
       <Header />
       <div className="contact-container">
-        <div style={{ width: "30px" }} className="contact-form">
+        <div style={{ width: "30px" ,    height: "70vh" }} className="contact-form">
           <h2 className="contact-title">Contact Us</h2>
           <form className="form-body" onSubmit={handleSubmit}>
             <div className="form-input">
