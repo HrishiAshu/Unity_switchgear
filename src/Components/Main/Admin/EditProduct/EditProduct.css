@@ -57,8 +57,7 @@
 
 .scrollable-form {
     max-height: 200vh;
-    /* Set a maximum height for the scrollable area */
-    overflow-y: auto;
+     overflow-y: auto;
 }
 
 ::-webkit-scrollbar {

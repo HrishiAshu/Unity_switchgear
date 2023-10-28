@@ -49,7 +49,7 @@ const OurServices = () => {
         <div className="row">
           {data.map((item, index) => (
             <div key={index} className="col-xl-3 col-sm-6 col-12">
-              <div className="card">
+              <div style={{backgroundColor:"#463b4c" , color:"red"}} className="card">
                 <div className="card-content">
                   <div className="card-body">
                     <div className="media d-flex">
@@ -58,7 +58,7 @@ const OurServices = () => {
                       </div>
                       <div className="media-body text-right">
                         <h3>{item.value}</h3>
-                        <span>{item.title}</span>
+                        <span style={{color:"white"}}>{item.title}</span>
                       </div>
                     </div>
                   </div>

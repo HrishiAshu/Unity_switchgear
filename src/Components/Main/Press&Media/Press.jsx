@@ -8,16 +8,21 @@ import { Container, Breadcrumb } from 'react-bootstrap';
 
 
 const Press = () => {
+  const breadcrumbItems = [
+    { label: 'Home', link: '/' },
+    { label: ' Press & Medi' },
+];
     return (
         <>
         <Header />
-         <div className='SolutionsTab'>
-                <Breadcrumb>
-                  <Breadcrumb.Item href="#">Home</Breadcrumb.Item>
-                  <Breadcrumb.Item href="#">Solutions</Breadcrumb.Item>
-                </Breadcrumb>
-                <h1 style={{ textAlign: "center" ,fontFamily:" Garamond, serif" }}> Press & Media  </h1>
-              </div>
+        <div className='UnityWhyTab'>
+                    <Breadcrumb>
+                        {breadcrumbItems.map((item, index) => (
+                            <Breadcrumb.Item key={index} href={item.link}>{item.label}</Breadcrumb.Item>
+                        ))}
+                    </Breadcrumb>
+                    <h1 className='headingOfHistory' style={{ textAlign: "center" }}>  Press & Media</h1>
+                </div>
             <OurNews />
       <Footer />
       </>

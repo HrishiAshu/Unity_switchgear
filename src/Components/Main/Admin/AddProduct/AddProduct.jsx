@@ -4,7 +4,7 @@ import Button from 'react-bootstrap/Button';
 import Badge from 'react-bootstrap/Badge';
 import { useDropzone } from 'react-dropzone';
 
-import './AddProduct.css'; // Import your custom CSS for styling
+import './AddProduct.css';  
 
 const AddProduct = () => {
   const [quantity, setQuantity] = useState(1);
