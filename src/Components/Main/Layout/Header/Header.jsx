@@ -28,14 +28,14 @@ const Header = () => {
         <div className="header-main-container">
             <div className="headerContent">
                 <Navbar expand="lg" style={{
-                    backgroundColor: "#fff", fontFamily: "ABBvoice-Medium, sans-serif", fontSize: "15px", boxShadow: " rgba(99, 99, 99, 0.2) 0px 2px 8px 0px"
+                    backgroundColor: "#fff", color: "black !important", fontFamily: "Garamond sans-serif", fontSize: "15px", boxShadow: " rgba(99, 99, 99, 0.2) 0px 2px 8px 0px"
                 }} className=" fixed-top">
                     <Container style={{ background: { header } }}>
                         <Navbar.Brand href="#home">Unity</Navbar.Brand>
                         <Navbar.Toggle aria-controls="basic-navbar-nav" />
                         <Navbar.Collapse id="basic-navbar-nav">
                             <Nav className="me-auto">
-                                <Nav.Link href="/">Home</Nav.Link>
+                                <Nav.Link href="/Home">Home</Nav.Link>
                                 <NavDropdown
                                     title="About Us"
                                     id="basic-nav-dropdown"
@@ -58,7 +58,7 @@ const Header = () => {
                                 <Nav.Link href="/Press">Press & Media</Nav.Link>
                                 <Nav.Link href="/ContactUs">Contact Us</Nav.Link>
                             </Nav>
-                            <NavDropdown title="Profile"
+                            <NavDropdown style={{ color: "black" }} title="Profile"
                                 onMouseEnter={() => handleDropdownHover('Profile')}
                                 onMouseLeave={handleDropdownLeave}
                                 show={showDropdown === 'Profile'}

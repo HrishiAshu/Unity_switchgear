@@ -10,8 +10,16 @@ import OurProducts from '../../Main/OurProducts/OurProducts';
 import OurNews from '../../Main/OurNews/OurNews';
 import OurProjects from '../../Main/OurProjects/OurProjects';
 import Slider from '../Carousol/Slider';
- 
+import { useNavigate } from 'react-router';
+
 const MainProductPage = () => {
+   const navigate = useNavigate() 
+ 
+   const handleReadMore=()=>{
+    navigate("/WhyUnity")
+
+   }
+
   return (
     <div className="page-content">
       <Slider />
@@ -19,14 +27,13 @@ const MainProductPage = () => {
         <Container>
           <Row>
             <Col xs={12} md={6}>
-              <h2>Who we are</h2>
+              <h2 style={{fontFamily:"Garamond, serif", fontWeight:"600"}}>Who we are</h2>
               <p>
-                Some text or description about the content goes here.
-              </p>
-              <Button variant="primary">Read More</Button>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt illo in delectus exercitationem dignissimos dolorum debitis numquam vero ut consequatur. Modi impedit error sint pariatur voluptatem enim laudantium nesciunt maiores deleniti fuga mollitia commodi officiis consequatur aliquid repudiandae harum, unde illum aut. Explicabo tempore fugiat corrupti ex eligendi maxime obcaecati!              </p>
+              <Button onClick={handleReadMore} variant="primary">Read More</Button>
             </Col>
             <Col xs={12} md={6}>
-              <Image  style={{boxShadow:" rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px"}}  src={sampleImage} thumbnail />
+              <Image style={{ boxShadow: " rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px" }} src={sampleImage} thumbnail />
             </Col>
           </Row>
         </Container>

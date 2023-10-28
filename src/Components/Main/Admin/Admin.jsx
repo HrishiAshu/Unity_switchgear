@@ -7,6 +7,7 @@ import DashBoard from "../Admin/DashBoard/DashBoard"
 // import Users from './Users';
 import AddProduct from "../Admin/AddProduct/AddProduct"
 import EditProduct from "../Admin/EditProduct/EditProduct"
+import Analytics from './Analytics/Analytics';
 
 
 export default function Admin() {
@@ -25,10 +26,11 @@ export default function Admin() {
                 <div className='adminSections'>
                     <Routes>
                         <Route exact path="/*" element={<DashBoard />} />
-                        {/* <Route exact path="/orders" element={<Orders />} /> */}
-                        {/* <Route exact path="/users" element={<Users />} /> */}
                         <Route exact path="/AddProduct" element={<AddProduct />} />
                         <Route exact path="/Admin/EditProduct" element={<EditProduct />} />
+                        <Route exact path="/Analytics" element={<Analytics />} />
+
+
 
                     </Routes>
                 </div>

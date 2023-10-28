@@ -10,13 +10,15 @@ import Products from '../Products/Products';
 import Press from '../Press&Media/Press';
 import ContactUsForm from '../ContactUs/ContactUsForm';
 import Projects from '../Projects/Projects';
+import LandingPage from '../LandingPage/LandingPage';
 
 const Main = () => {
     return (
         <div>
             <BrowserRouter>
                 <Routes>
-                    <Route path='/' element={<Home />} />
+                    <Route path='/' element={<LandingPage />} />
+                    <Route path='/Home' element={<Home />} />
                     <Route path='/Admin/*' element={<Admin />} />
                     <Route path='/WhyUnity' element={<WhyUnity />} />
                     <Route path='/OurHistory' element={<OurHistory />} />
@@ -25,6 +27,7 @@ const Main = () => {
                     <Route path='/Press' element={<Press />} />
                     <Route path='/Products' element={<Products />} />
                     <Route path='/ContactUs' element={<ContactUsForm />} />
+
                 </Routes>
             </BrowserRouter>
         </div>

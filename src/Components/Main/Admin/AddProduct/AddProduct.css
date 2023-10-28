@@ -44,10 +44,24 @@
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: 33px;
-    left: 3%;
+    top: 0;
+    left: 0;
+    right: 0;
     font-size: x-large;
+    background-color: white;
+    /* Set a background color to make it stand out */
+    z-index: 1;
+    /* Ensure it's above the form content */
+    padding: 10px 0;
+    /* Add some padding to improve spacing */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    /* Add a shadow for separation */
+}
 
+.scrollable-form {
+    max-height: 200vh;
+    /* Set a maximum height for the scrollable area */
+    overflow-y: auto;
 }
 
 ::-webkit-scrollbar {
@@ -55,13 +69,14 @@
 }
 
 .form-container {
-    margin: 0 auto;
+    margin-top: 5%;
     justify-self: center;
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-content: center;
     align-items: center;
     gap: 25px;
+    height: 100vh;
 
 
 }
@@ -98,4 +113,24 @@
         align-items: center;
     }
 
+}
+
+
+.scrollable-form {
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+.dropzone {
+    border: 2px dashed #cccccc;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.image-preview {
+    max-width: 100%;
+    max-height: 200px;
+    display: block;
+    margin: 10px 0;
 }

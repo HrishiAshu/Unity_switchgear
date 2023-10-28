@@ -70,18 +70,17 @@ const ContactUsForm = () => {
         <div className="contact-details">
           <h2>Contact Details</h2>
           <h3>Address</h3>
-          <p>4, Paradise Apartment,
-            Serene meadows,
-            Gangapur Road, Nashik,Maharashtra India-422012</p>
+          <span>4, Paradise Apartment, </span>
+          <span>Serene meadows,</span>
+          <span>Gangapur Road,</span>
+          <span>Nashik,Maharashtra India-422012</span>
           <h3>Phone</h3>
           <p> +91 9601296115
             +91 8459298147</p>
           <h3>Email</h3>
           <p>
-
             unity.switchgear@gmail.com
             jagdish.nirgude@unityswitchgear.com</p>
-
         </div>
       </div>
       <Footer />
