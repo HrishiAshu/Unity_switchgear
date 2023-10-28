@@ -2,10 +2,11 @@
 .headerOfSolutions {
     text-align: center;
     padding: 40px 0;
-    background-color: #ffffff;
-    color: #000000;
+    background-color: #151414;
+    color: #ff5e14;
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.35);
 }
+
 
 .headerOfSolutions > h1 {
     font-size: 28px;

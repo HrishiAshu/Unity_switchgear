@@ -6,16 +6,21 @@ import OurProducts from '../OurProducts/OurProducts'
 import Header from '../Layout/Header/Header';
 import Footer from '../Layout/Header/Footer';
 const Products = () => {
+  const breadcrumbItems = [
+    { label: 'Home', link: '/' },
+    { label: 'Our Products' },
+];
   return (
     <>
     <Header />
-    <div className='ProductsTab'>
-           <Breadcrumb>
-             <Breadcrumb.Item to="/">Home</Breadcrumb.Item>
-             <Breadcrumb.Item href="/products">Products</Breadcrumb.Item>
-           </Breadcrumb>
-           <h1 style={{ textAlign: "center" ,fontFamily:" Garamond, serif" }}> Products  </h1>
-         </div>
+    <div className='UnityWhyTab'>
+                    <Breadcrumb>
+                        {breadcrumbItems.map((item, index) => (
+                            <Breadcrumb.Item key={index} href={item.link}>{item.label}</Breadcrumb.Item>
+                        ))}
+                    </Breadcrumb>
+                    <h1 className='headingOfHistory' style={{ textAlign: "center" }}>  Our Products</h1>
+                </div>
        <OurProducts />
  <Footer />
  </>
