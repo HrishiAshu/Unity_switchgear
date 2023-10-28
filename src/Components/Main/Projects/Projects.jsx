@@ -14,8 +14,8 @@ const Projects = () => {
                     <Breadcrumb.Item href="#">Home</Breadcrumb.Item>
                     <Breadcrumb.Item href="#">Projects</Breadcrumb.Item>
                 </Breadcrumb>
-    
-                <h1 style={{ textAlign: "center" , fontFamily:" Garamond, serif"  }}> Projects  </h1>
+
+                <h1 style={{ textAlign: "center", fontFamily: " Garamond, serif" }}> Projects  </h1>
             </div>
             <div className="TabProject">
 
