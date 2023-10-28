@@ -3,6 +3,11 @@ import './OurNews.css';
 import electric1 from "../../Main/Sources/Daily-News-Wrap-Up-Power-Ministry-Amends-License-Rules-to-Distribute-Electricity.png"
 
 const OurNews = () => {
+
+const handleReadMore=()=>{
+    alert("readmore")
+}
+
     const articlesData = [
         {
             id: 1,
@@ -41,7 +46,7 @@ const OurNews = () => {
                                 </figure>
                                 <div className="article-body">
                                     <p>{article.content}</p>
-                                    <a className="read-more">
+                                    <a onClick={handleReadMore} className="read-more">
                                         Read more <span className="sr-only">about {article.title}</span>
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"

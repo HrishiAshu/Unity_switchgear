@@ -27,6 +27,9 @@
   padding: 20px;
   margin-right: 10px;
   border: 1px solid black;
+  background: linear-gradient(90deg, rgba(0,0,0,0.1) 0%, rgba(255,255,255,0.4) 100%), url(../Sources/picture-two-electrical-engineers-checking-electrical-work-using-computer-standing-power-station-see-planning-work-high-voltage-electrodes_140555-3.avif) no-repeat no-repeat center center/cover;
+  margin-bottom: 5%;
+  color:black;
 }
 
 .contact-details {
@@ -69,6 +72,13 @@ textarea {
 
 .submit-button:hover {
   background-color: #0056b3;
+}
+
+@media (max-width: 600px) {
+  .contact-form{
+    margin-top: 2%;
+  }
+  
 }
 
 @media (max-width: 768px) {

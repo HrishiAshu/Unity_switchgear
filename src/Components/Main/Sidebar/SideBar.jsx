@@ -37,9 +37,6 @@ export default function SideBar() {
         <NavLink exact to="/Admin/AddProduct" activeClassName="activeClicked">
           <CDBSidebarMenuItem icon="table">Add Product</CDBSidebarMenuItem>
         </NavLink>
-        {/* <NavLink exact to="" activeClassName="activeClicked">
-          <CDBSidebarMenuItem icon="user">Profile page</CDBSidebarMenuItem>
-        </NavLink> */}
         <NavLink exact to="/Admin/Analytics" activeClassName="activeClicked">
           <CDBSidebarMenuItem icon="chart-line">Analytics</CDBSidebarMenuItem>
         </NavLink>
